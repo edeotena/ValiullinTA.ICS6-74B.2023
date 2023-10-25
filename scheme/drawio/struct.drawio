@@ -1,0 +1,90 @@
+<mxfile host="app.diagrams.net" modified="2023-10-25T06:08:26.498Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="1nyC_Kg8AcR_0BbiL3wr" version="22.0.7" type="device">
+  <diagram name="Page-1" id="8JoXAdzKfBRPdUjqxzuP">
+    <mxGraphModel dx="724" dy="423" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tgpizIDTbzc8vQv4ngIy-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.002;entryY=0.521;entryDx=0;entryDy=0;endArrow=open;endFill=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;fontFamily=GOSTRUS Type A;fontStyle=2;fontSize=14;entryPerimeter=0;" parent="1" source="tgpizIDTbzc8vQv4ngIy-1" target="tgpizIDTbzc8vQv4ngIy-15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="310" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="320" y="230" />
+              <mxPoint x="320" y="255" />
+              <mxPoint x="390" y="255" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wL2zTCt2lYRS9yohqUFu-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;endArrow=open;endFill=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" parent="1" source="tgpizIDTbzc8vQv4ngIy-1" target="tgpizIDTbzc8vQv4ngIy-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tgpizIDTbzc8vQv4ngIy-1" value="МК" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=GOSTRUS Type A;fontStyle=2;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="190" y="170" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tgpizIDTbzc8vQv4ngIy-4" value="ЖК дисплей" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=GOSTRUS Type A;fontStyle=2;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="190" y="60" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tgpizIDTbzc8vQv4ngIy-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=open;endFill=0;fontFamily=GOSTRUS Type A;fontStyle=2;fontSize=14;" parent="1" source="tgpizIDTbzc8vQv4ngIy-9" target="tgpizIDTbzc8vQv4ngIy-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tgpizIDTbzc8vQv4ngIy-9" value="Блок ввода размера таблицы" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=GOSTRUS Type A;fontStyle=2;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="190" y="300" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tgpizIDTbzc8vQv4ngIy-11" value="Сигнал о начале отсчитывания" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOSTRUS Type A;fontStyle=2;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="30" y="161" width="155" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tgpizIDTbzc8vQv4ngIy-13" value="Размер таблицы" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOSTRUS Type A;fontStyle=2;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="233" y="260" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tgpizIDTbzc8vQv4ngIy-14" value="Таблица Шульте" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOSTRUS Type A;fontStyle=2;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="160" y="130" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tgpizIDTbzc8vQv4ngIy-15" value="SPEAKER" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=GOSTRUS Type A;fontStyle=2;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="400" y="224" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tgpizIDTbzc8vQv4ngIy-17" value="Сигнал о новом рекорде" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOSTRUS Type A;fontStyle=2;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="310" y="222" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M031vjoLp6dwmKrfwIyu-1" value="" style="endArrow=open;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;endFill=0;fontFamily=GOSTRUS Type A;fontStyle=2;fontSize=14;" parent="1" target="tgpizIDTbzc8vQv4ngIy-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="40" y="190" as="sourcePoint" />
+            <mxPoint x="190" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M031vjoLp6dwmKrfwIyu-2" value="" style="endArrow=open;html=1;rounded=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;endFill=0;fontFamily=GOSTRUS Type A;fontStyle=2;fontSize=14;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="40" y="227" as="sourcePoint" />
+            <mxPoint x="190" y="227.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M031vjoLp6dwmKrfwIyu-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;endArrow=open;endFill=0;fontFamily=GOSTRUS Type A;fontStyle=2;fontSize=14;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" parent="1" source="tgpizIDTbzc8vQv4ngIy-1" target="tgpizIDTbzc8vQv4ngIy-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="170" as="sourcePoint" />
+            <mxPoint x="240" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QGkEIzD9Nm5zrg7SwTpL-2" value="Сигнал о конце отсчитывания" style="text;whiteSpace=wrap;fontSize=14;fontStyle=2;fontFamily=GOSTRUS Type A;align=center;" parent="1" vertex="1">
+          <mxGeometry x="25" y="200" width="165" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QGkEIzD9Nm5zrg7SwTpL-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;startArrow=open;startFill=0;" parent="1" source="QGkEIzD9Nm5zrg7SwTpL-5" target="tgpizIDTbzc8vQv4ngIy-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="160" />
+              <mxPoint x="320" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QGkEIzD9Nm5zrg7SwTpL-5" value="ПЭВМ" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=GOSTRUS Type A;fontStyle=2;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="400" y="130" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QGkEIzD9Nm5zrg7SwTpL-8" value="Результаты испытаний" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOSTRUS Type A;fontStyle=2;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="310" y="128" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wL2zTCt2lYRS9yohqUFu-3" value="Среднее&lt;br&gt;время" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=GOSTRUS Type A;fontStyle=2;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="236" y="131" width="100" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
