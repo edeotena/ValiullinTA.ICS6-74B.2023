@@ -1,0 +1,7 @@
+../Core/Src/main.c:66:6:show_table	80	static
+../Core/Src/main.c:92:6:write_size	40	static
+../Core/Src/main.c:104:6:reset_screen	40	static
+../Core/Src/main.c:113:6:size_chosed	16	static
+../Core/Src/main.c:223:6:SystemClock_Config	96	static,ignoring_inline_asm
+../Core/Src/main.c:126:5:main	312	static,ignoring_inline_asm
+../Core/Src/main.c:416:6:Error_Handler	0	static,ignoring_inline_asm
