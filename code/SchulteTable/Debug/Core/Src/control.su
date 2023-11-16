@@ -1,0 +1,7 @@
+../Core/Src/control.c:27:6:show_table	88	static
+../Core/Src/control.c:53:6:reset_screen	32	static
+../Core/Src/control.c:62:6:size_chosed	24	static
+../Core/Src/control.c:69:6:on_stop_pressed	256	static
+../Core/Src/control.c:90:6:write_size	40	static
+../Core/Src/control.c:102:6:play_sound	32	static
+../Core/Src/control.c:111:6:is_best_time	56	static
