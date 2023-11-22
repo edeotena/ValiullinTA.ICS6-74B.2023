@@ -60,8 +60,8 @@ all: main-build
 main-build: SchulteTable.elf secondary-outputs
 
 # Tool invocations
-SchulteTable.elf SchulteTable.map: $(OBJS) $(USER_OBJS) C:\Users\edeot\OneDrive\Desktop\SchulteTable\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "SchulteTable.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\edeot\OneDrive\Desktop\SchulteTable\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SchulteTable.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+SchulteTable.elf SchulteTable.map: $(OBJS) $(USER_OBJS) C:\Users\edeot\OneDrive\Desktop\ValiullinTA.ICS6-74B.2023\code\SchulteTable\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "SchulteTable.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\edeot\OneDrive\Desktop\ValiullinTA.ICS6-74B.2023\code\SchulteTable\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SchulteTable.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -47,7 +47,7 @@ void ShowTable(int bcolor, int fcolor)
 
 	char format_string[] = "Size: _x_";
 	format_string[6] = format_string[8] =  schulte_table.size + '0';
-	ST7735_DrawString(3, 3 + (schulte_table.size + 1) * 15, format_string, Font_7x10, fcolor, bcolor);
+	ST7735_DrawString(35, 3 + (schulte_table.size + 1) * 15, format_string, Font_7x10, fcolor, bcolor);
 }
 
 void ResetScreen(int bcolor, int fcolor) {
