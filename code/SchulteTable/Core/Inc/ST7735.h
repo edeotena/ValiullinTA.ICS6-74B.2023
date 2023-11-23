@@ -40,39 +40,14 @@ void ST7735_DrawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t co
 #define ST7735S_1_8_DEFAULT_ORIENTATION   // WaveShare ST7735S-based 1.8" display, default orientation
 
 //Port and pin connected signal 'RES' (reset) ST7735 display
-#ifndef ST7735_RES_Pin
 #define ST7735_RES_Pin      GPIO_PIN_12
-#endif
-#ifndef ST7735_RES_GPIO_Port
 #define ST7735_RES_GPIO_Port  GPIOB
-#endif
 //Port and pin connected signal 'DC' (data or command) ST7735 display
-#ifndef ST7735_DC_Pin
 #define ST7735_DC_Pin       GPIO_PIN_13
-#endif
-#ifndef ST7735_DC_GPIO_Port
 #define ST7735_DC_GPIO_Port   GPIOB
-#endif
 //Port and pin connected signal 'CS' (chip select) ST7735 display
-#ifndef ST7735_CS_Pin
 #define ST7735_CS_Pin       GPIO_PIN_14
-#endif
-#ifndef ST7735_CS_GPIO_Port
 #define ST7735_CS_GPIO_Port   GPIOB
-#endif
-//Port and pin connected signal 'BL' (back light) ST7735 display
-#ifndef ST7735_BL_Pin
-#define ST7735_BL_Pin     GPIO_PIN_15
-#endif
-#ifndef ST7735_BL_GPIO_Port
-#define ST7735_BL_GPIO_Port   GPIOB
-#endif
-
-#define ST7735_MADCTL_MY  0x80
-#define ST7735_MADCTL_MX  0x40
-#define ST7735_MADCTL_MV  0x20
-#define ST7735_MADCTL_RGB 0x00
-#define ST7735_MADCTL_BGR 0x08
 
 // WaveShare ST7735S-based 1.8" display, default orientation
 #ifdef ST7735S_1_8_DEFAULT_ORIENTATION
@@ -81,7 +56,7 @@ void ST7735_DrawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t co
 #define ST7735_HEIGHT       160
 #define ST7735_XSTART       2
 #define ST7735_YSTART       1
-#define ST7735_DATA_ROTATION  ST7735_MADCTL_RGB
+#define ST7735_DATA_ROTATION  0
 #endif //ST7735S_1_8_DEFAULT_ORIENTATION
 
 #define ST7735_NOP     0x00
@@ -134,8 +109,6 @@ void ST7735_DrawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t co
 
 /* Ports config */
 
-#define TFT_BL_H()  HAL_GPIO_WritePin(ST7735_BL_GPIO_Port, ST7735_BL_Pin, GPIO_PIN_SET)
-#define TFT_BL_L()  HAL_GPIO_WritePin(ST7735_BL_GPIO_Port, ST7735_BL_Pin, GPIO_PIN_RESET)
 #define TFT_CS_H()  HAL_GPIO_WritePin(ST7735_CS_GPIO_Port, ST7735_CS_Pin, GPIO_PIN_SET)
 #define TFT_CS_L()  HAL_GPIO_WritePin(ST7735_CS_GPIO_Port, ST7735_CS_Pin, GPIO_PIN_RESET)
 #define TFT_DC_D()  HAL_GPIO_WritePin(ST7735_DC_GPIO_Port, ST7735_DC_Pin, GPIO_PIN_SET)

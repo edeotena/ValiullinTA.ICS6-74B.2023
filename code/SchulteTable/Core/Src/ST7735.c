@@ -8,11 +8,10 @@ static void ST7735_WriteData(uint8_t* buff, size_t buff_size);
 static void ST7735_ExecuteCommandList(const uint8_t *addr);
 static void ST7735_SetAddressWindow(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1);
 static void ST7735_WriteChar(uint16_t x, uint16_t y, char ch, FontDef font, uint16_t color, uint16_t bgcolor);
-static void ST7735_DrawPixel(uint16_t x, uint16_t y, uint16_t color);
 
 /* Main functions */
 
-void ST7735_Init()
+void ST7735_Init(int bcolor, int fcolor)
 {
 	TFT_CS_L();
     ST7735_Reset();
@@ -51,13 +50,20 @@ void ST7735_FillScreen(uint16_t color)
 
 void ST7735_DrawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t color)
 {
+	TFT_CS_L();
+	ST7735_SetAddressWindow(x0, y0, x1, y0);
+
+	uint8_t data[] = { color >> 8, color & 0xFF };
+	TFT_DC_D();
 	for (int i = x0; i < x1; ++i) {
-		ST7735_DrawPixel(i, y0, color);
+		ST7735_WriteData(data, sizeof(data));
 	}
 
+	ST7735_SetAddressWindow(x0, y0, x0, y1);
 	for (int i = y0; i < y1; ++i) {
-		ST7735_DrawPixel(x0, i, color);
+		ST7735_WriteData(data, sizeof(data));
 	}
+	TFT_CS_H();
 }
 
 /* Helpers */
@@ -151,17 +157,6 @@ static void ST7735_WriteChar(uint16_t x, uint16_t y, char ch, FontDef font, uint
             }
         }
     }
-}
-
-void ST7735_DrawPixel(uint16_t x, uint16_t y, uint16_t color)
-{
-    TFT_CS_L();
-
-    ST7735_SetAddressWindow(x, y, x+1, y+1);
-    uint8_t data[] = { color >> 8, color & 0xFF };
-    ST7735_WriteData(data, sizeof(data));
-
-    TFT_CS_H();
 }
 
 /* Font definition */

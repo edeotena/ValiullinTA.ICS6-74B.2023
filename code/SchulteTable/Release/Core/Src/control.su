@@ -1,5 +1,0 @@
-../Core/Src/control.c:90:6:WriteSize	40	static
-../Core/Src/control.c:27:6:ShowTable	80	static
-../Core/Src/control.c:53:6:ResetScreen	40	static
-../Core/Src/control.c:62:6:SizeChosed	8	static
-../Core/Src/control.c:69:6:OnStopPressed	248	static

@@ -97,9 +97,10 @@ int main(void)
   MX_RTC_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-  int bcolor = ST7735_RGB(0, 128, 128);
-  int fcolor = ST7735_WHITE;
-  ST7735_Init();
+  //int bcolor = ST7735_RGB(0, 128, 128);
+  //int fcolor = ST7735_WHITE;
+  int bcolor = ST7735_BLACK, fcolor = ST7735_GREEN;
+  ST7735_Init(bcolor, fcolor);
   ResetScreen(bcolor, fcolor);
   int time = 0;
   /* USER CODE END 2 */

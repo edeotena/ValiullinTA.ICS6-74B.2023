@@ -41,21 +41,21 @@ void ShowTable(int bcolor, int fcolor)
 	}
 
 	for(int i = 1; i < schulte_table.size; ++i) {
-		ST7735_DrawLine(i * 18, 0, i * 18, schulte_table.size * 14 + 4, fcolor);
-		ST7735_DrawLine(0, i * 15, 18 * schulte_table.size + 2, i * 15, fcolor);
+		ST7735_DrawLine(i * 18, 0, i * 18, schulte_table.size * 14 + 5, fcolor);
+		ST7735_DrawLine(0, i * 15 - 1, 18 * schulte_table.size, i * 15 - 1, fcolor);
 	}
 
-	char format_string[] = "Size: _x_";
+	char format_string[] = "size: _x_";
 	format_string[6] = format_string[8] =  schulte_table.size + '0';
 	ST7735_DrawString(35, 3 + (schulte_table.size + 1) * 15, format_string, Font_7x10, fcolor, bcolor);
 }
 
 void ResetScreen(int bcolor, int fcolor) {
 	  ST7735_FillScreen(bcolor);
-	  ST7735_DrawString(3, 3, "Choose size from", Font_7x10, fcolor, bcolor);
-	  ST7735_DrawString(3, 18, "[3;7] by pressing", Font_7x10, fcolor, bcolor);
-	  ST7735_DrawString(3, 33, "corresponding button", Font_7x10, fcolor, bcolor);
-	  ST7735_DrawString(3, 63, "Chosen size:", Font_7x10, fcolor, bcolor);
+	  char *text[] = { "Choose size from", "[3;7] by pressing", "corresponding button", "", "Chosen size:" };
+	  for (int i = 0; i < sizeof(text) / sizeof(text[i]); ++i) {
+		  ST7735_DrawString(3, 3 + i * 15, text[i], Font_7x10, fcolor, bcolor);
+	  }
 	  WriteSize(bcolor, fcolor);
 }
 
