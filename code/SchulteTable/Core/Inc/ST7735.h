@@ -16,9 +16,9 @@ extern FontDef Font_7x10;
 extern SPI_HandleTypeDef ST7735_SPI_PORT;
 
 void ST7735_Init();
-void ST7735_DrawString(uint16_t x, uint16_t y, const char* str, FontDef font, uint16_t color, uint16_t bgcolor);
-void ST7735_FillScreen(uint16_t color);
-void ST7735_DrawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t color);
+void ST7735_DrawString(uint16_t x, uint16_t y, const char* str, FontDef font);
+void ST7735_FillScreen();
+void ST7735_DrawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1);
 
 /* Color definitions */
 

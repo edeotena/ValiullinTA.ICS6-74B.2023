@@ -1,5 +1,8 @@
 #include "ST7735.h"
 
+uint16_t bcolor = ST7735_BLACK;  // Background color definition
+uint16_t fcolor = ST7735_GREEN;  // Font and lines color definition
+
 /* Helpers prototypes */
 
 static void ST7735_Reset();
@@ -11,7 +14,7 @@ static void ST7735_WriteChar(uint16_t x, uint16_t y, char ch, FontDef font, uint
 
 /* Main functions */
 
-void ST7735_Init(int bcolor, int fcolor)
+void ST7735_Init()
 {
 	TFT_CS_L();
     ST7735_Reset();
@@ -19,25 +22,25 @@ void ST7735_Init(int bcolor, int fcolor)
     TFT_CS_H();
 }
 
-void ST7735_DrawString(uint16_t x, uint16_t y, const char* str, FontDef font, uint16_t color, uint16_t bgcolor)
+void ST7735_DrawString(uint16_t x, uint16_t y, const char* str, FontDef font)
 {
 	TFT_CS_L();
 
     while(*str)
     {
-        ST7735_WriteChar(x, y, *str++, font, color, bgcolor);
+        ST7735_WriteChar(x, y, *str++, font, fcolor, bcolor);
         x += font.width;
     }
 
     TFT_CS_H();
 }
 
-void ST7735_FillScreen(uint16_t color)
+void ST7735_FillScreen()
 {
 	TFT_CS_L();
 	ST7735_SetAddressWindow(0, 0, ST7735_WIDTH - 1, ST7735_HEIGHT - 1);
 
-	uint8_t data[] = { color >> 8, color & 0xFF };
+	uint8_t data[] = { bcolor >> 8, bcolor & 0xFF };
 	TFT_DC_D();
 	for (int y = ST7735_HEIGHT; y >= 0; y--) {
 		for (int x = ST7735_WIDTH; x >= 0; x--) {
@@ -45,15 +48,16 @@ void ST7735_FillScreen(uint16_t color)
 		}
 	}
 	TFT_CS_H();
+	ST7735_DrawLine(0, 143, 128, 143);
 }
 
 
-void ST7735_DrawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t color)
+void ST7735_DrawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1)
 {
 	TFT_CS_L();
 	ST7735_SetAddressWindow(x0, y0, x1, y0);
 
-	uint8_t data[] = { color >> 8, color & 0xFF };
+	uint8_t data[] = { fcolor >> 8, fcolor & 0xFF };
 	TFT_DC_D();
 	for (int i = x0; i < x1; ++i) {
 		ST7735_WriteData(data, sizeof(data));

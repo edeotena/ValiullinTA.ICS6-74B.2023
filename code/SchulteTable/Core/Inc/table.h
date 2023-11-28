@@ -1,6 +1,8 @@
 #ifndef TABLE_H_
 #define TABLE_H_
 
+#define DEFAULT_SIZE 7
+
 typedef struct {
     int size;
     int data[7][7];

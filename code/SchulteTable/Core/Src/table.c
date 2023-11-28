@@ -3,7 +3,7 @@
 
 #include "table.h"
 
-TableContent schulte_table = {0, {}};
+TableContent schulte_table = {DEFAULT_SIZE, {}};
 
 void FillTable(int entropy, int sr) {
 	srand(sr);
