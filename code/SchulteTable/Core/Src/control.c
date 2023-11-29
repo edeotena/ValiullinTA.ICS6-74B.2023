@@ -51,13 +51,13 @@ void ShowTable()
 }
 
 void ResetScreen() {
-	  ST7735_FillScreen();
-	  char *text[] = { "Choose size from", "[3;7] by pressing", "corresponding button", "" };
-	  for (int i = 0; i < sizeof(text) / sizeof(text[i]); ++i) {
-		  ST7735_DrawString(3, 3 + i * 15, text[i], Font_7x10);
-	  }
+	ST7735_FillScreen();
+	char *text[] = { "Choose size from", "[3;7] by pressing", "corresponding button", "" };
+	for (int i = 0; i < sizeof(text) / sizeof(text[i]); ++i) {
+		ST7735_DrawString(3, 3 + i * 15, text[i], Font_7x10);
+	}
 
-	  SetSize(schulte_table.size);
+	SetSize(schulte_table.size);
 }
 
 void OnStopPressed(int time) {
@@ -104,7 +104,7 @@ void SetSize(int size) {
 	char format_str[15] = "Chosen size:  \0";
 	format_str[13] = schulte_table.size + '0';
 	ST7735_DrawString(3, 63, format_str, Font_7x10);
-	FillTable(2 * size * size, HAL_GetTick());
+	FillTable(5 * size * size, HAL_GetTick());
 	state = CHOSED_SIZE;
 }
 

@@ -1,7 +1,7 @@
 #include "ST7735.h"
 
-uint16_t bcolor = ST7735_BLACK;  // Background color definition
-uint16_t fcolor = ST7735_GREEN;  // Font and lines color definition
+uint16_t fcolor = ST7735_WHITE;  // Background color definition
+uint16_t bcolor = ST7735_BLACK;  // Font and lines color definition
 
 /* Helpers prototypes */
 

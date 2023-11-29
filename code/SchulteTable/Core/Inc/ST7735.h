@@ -37,7 +37,6 @@ void ST7735_DrawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1);
 /* ONLY CONFIG BELOW */
 
 #define ST7735_SPI_PORT hspi1 //hspi1, hspi2, hspi3...
-#define ST7735S_1_8_DEFAULT_ORIENTATION   // WaveShare ST7735S-based 1.8" display, default orientation
 
 //Port and pin connected signal 'RES' (reset) ST7735 display
 #define ST7735_RES_Pin      GPIO_PIN_12
@@ -50,14 +49,12 @@ void ST7735_DrawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1);
 #define ST7735_CS_GPIO_Port   GPIOB
 
 // WaveShare ST7735S-based 1.8" display, default orientation
-#ifdef ST7735S_1_8_DEFAULT_ORIENTATION
 #define ST7735_IS_160X128     1
 #define ST7735_WIDTH        128
 #define ST7735_HEIGHT       160
 #define ST7735_XSTART       2
 #define ST7735_YSTART       1
 #define ST7735_DATA_ROTATION  0
-#endif //ST7735S_1_8_DEFAULT_ORIENTATION
 
 #define ST7735_NOP     0x00
 #define ST7735_SWRESET 0x01
@@ -116,7 +113,7 @@ void ST7735_DrawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1);
 #define TFT_RES_H() HAL_GPIO_WritePin(ST7735_RES_GPIO_Port, ST7735_RES_Pin, GPIO_PIN_SET)
 #define TFT_RES_L() HAL_GPIO_WritePin(ST7735_RES_GPIO_Port, ST7735_RES_Pin, GPIO_PIN_RESET)
 
-/* Init comands based on Adafruit ST7735 library for Arduino */
+/* Init comands */
 
 static const uint8_t
 init_cmds1[] = {                     // Init for 7735R, part 1 (red or green tab)

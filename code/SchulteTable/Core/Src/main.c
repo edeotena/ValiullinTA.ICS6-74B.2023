@@ -103,6 +103,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   ST7735_Init();
   ResetScreen();
+  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -353,42 +354,42 @@ static void MX_GPIO_Init(void)
   /* EXTI interrupt init*/
   NVIC_SetPriority(SysTick_IRQn, 0);
   NVIC_SetPriority(EXTI9_5_IRQn, 1);
-  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
-
 }
 
 /* USER CODE BEGIN 4 */
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-	static int time;
-	if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6) == 0) {
-		if (state == TABLE_SHOWING) {
-			WriteError("Stop to continue");
-			return;
-		}
-		IncreaseSize();
-	} else if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_7) == 0) {
-		if (state == TABLE_SHOWING) {
-			WriteError("Stop to continue");
-			return;
-		}
-		DecreaseSize();
-	} else if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_8) == 0) {
-		if (state == TABLE_SHOWING) {
-			WriteError("Stop to continue");
-			return;
-		}
-		ShowTable();
-		time = HAL_GetTick();
-	} else if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_9) == 0) {
-		if (state == CHOSED_SIZE) {
-			WriteError("Start to continue");
-			return;
-		}
-		OnStopPressed(time);
-		ResetScreen();
+  static int time;
+  HAL_NVIC_DisableIRQ(EXTI9_5_IRQn);
+  if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6) == 0) {
+	if (state == TABLE_SHOWING) {
+	  WriteError("Stop to continue");
+	} else {
+	  IncreaseSize();
 	}
+  } else if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_7) == 0) {
+	if (state == TABLE_SHOWING) {
+	  WriteError("Stop to continue");
+	} else {
+		DecreaseSize();
+	}
+  } else if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_8) == 0) {
+	if (state == TABLE_SHOWING) {
+	  WriteError("Stop to continue");
+	} else {
+	  ShowTable();
+	  time = HAL_GetTick();
+	}
+  } else if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_9) == 0) {
+	if (state == CHOSED_SIZE) {
+	  WriteError("Start to continue");
+	} else {
+	  OnStopPressed(time);
+	  ResetScreen();
+	}
+  }
+  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
 }
 
 /* USER CODE END 4 */
