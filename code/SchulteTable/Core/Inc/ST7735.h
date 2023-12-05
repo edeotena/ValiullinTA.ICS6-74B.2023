@@ -39,14 +39,14 @@ void ST7735_DrawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1);
 #define ST7735_SPI_PORT hspi1 //hspi1, hspi2, hspi3...
 
 //Port and pin connected signal 'RES' (reset) ST7735 display
-#define ST7735_RES_Pin      GPIO_PIN_12
-#define ST7735_RES_GPIO_Port  GPIOB
+#define ST7735_RES_Pin      GPIO_PIN_11
+#define ST7735_RES_GPIO_Port  GPIOA
 //Port and pin connected signal 'DC' (data or command) ST7735 display
-#define ST7735_DC_Pin       GPIO_PIN_13
-#define ST7735_DC_GPIO_Port   GPIOB
+#define ST7735_DC_Pin       GPIO_PIN_12
+#define ST7735_DC_GPIO_Port   GPIOA
 //Port and pin connected signal 'CS' (chip select) ST7735 display
-#define ST7735_CS_Pin       GPIO_PIN_14
-#define ST7735_CS_GPIO_Port   GPIOB
+#define ST7735_CS_Pin       GPIO_PIN_13
+#define ST7735_CS_GPIO_Port   GPIOA
 
 // WaveShare ST7735S-based 1.8" display, default orientation
 #define ST7735_IS_160X128     1
