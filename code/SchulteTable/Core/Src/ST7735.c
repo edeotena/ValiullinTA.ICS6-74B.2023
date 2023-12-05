@@ -263,4 +263,4 @@ static const uint16_t Font7x10 [] = {
 	0x0000, 0x0000, 0x0000, 0x7400, 0x4C00, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,  // ~
 };
 
-FontDef Font_7x10 = {6,10,Font7x10};
+FontDef Font_7x10 = { 6,10,Font7x10 };

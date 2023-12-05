@@ -101,6 +101,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
+  HAL_NVIC_DisableIRQ(EXTI9_5_IRQn);
   ST7735_Init();
   ResetScreen();
   HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);

@@ -112,13 +112,6 @@ void PlaySound(int time) {
 	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
 	HAL_Delay(time);
 	HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_2);
-	/*
-	for (int i = 0; i < time / (duration1 + duration2); ++i) {
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, 0);
-		HAL_Delay(duration1);
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, 1);
-		HAL_Delay(duration2);
-	}*/
 }
 
 void IsBestTime(int time) {
