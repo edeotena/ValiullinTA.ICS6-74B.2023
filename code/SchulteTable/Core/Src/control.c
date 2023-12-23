@@ -78,6 +78,7 @@ void OnStopPressed(int time) {
 }
 
 void WriteError(char *msg) {
+	ST7735_DrawString(3, 148, "                    ", Font_7x10);
 	ST7735_DrawString(3, 148, msg, Font_7x10);
 }
 
